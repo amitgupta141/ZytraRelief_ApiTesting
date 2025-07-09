@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="./moon-stars-fill.svg" alt="theme" class="theme-button dark-theme" id="theme-button">
+  <div class="login-container">
+    <h2>Please <span class="highlight">Login</span> Your Account?</h2>
+    <div class="toggle-buttons">
+      <button id="userBtn" class="active">User</button>
+      <button id="partnerBtn">Partner</button>
+    </div>
+
+    <form id="loginForm" method="post" action="./login.php">
+      <input type="hidden" name="user_type" id="userTypeInput" value="user" />
+      <div class="form-group" id="studentFields">
+        <input type="text" name="email" placeholder="Email">
+      </div>
+
+      <div class="form-group" id="facultyFields" style="display: none;">
+        <input type="text" name="partneremail" placeholder="Partner Email">
+      </div>
+
+      <div class="form-group">
+        <input type="password" name="password" placeholder="Password" required>
+      </div>
+
+      <button type="submit" class="login-btn">Login</button>
+      <p class="forgot"><a class="" href="">Forgot Password?</a></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
